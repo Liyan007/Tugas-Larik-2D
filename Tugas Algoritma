@@ -4,7 +4,10 @@
 main(){
 int a[2][5]={4,5,8,1,2,3,11,23,10,13}, i, j, k, x=3, idx, temp;
 int menu;
+char pil;
 
+while(1) {
+printf("---------------------------------------\n");
 printf("Menu Pilihan Anda :\n");
 printf("---------------------------------------\n");
 printf("1. Pencarian X=3 menggunakan larik 2D.\n");
@@ -52,4 +55,14 @@ break;
 default:{
 printf("maaf, Pilihan Anda Tidak Ada.\n");}
 }
+    printf("Apakah kamu ingin mengulang (Y/N) ? "); scanf("%s", &pil);
+
+    if(toupper(pil) == 'Y') continue;
+    if(toupper(pil) == 'N') break;
+
+    printf("Jawaban yang kamu berikan salah!");
+    getch();
+  }
+  printf("Kamu telah keluar dari perulangan!");
+  getch();
 }
