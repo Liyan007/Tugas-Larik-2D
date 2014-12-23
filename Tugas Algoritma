@@ -63,6 +63,6 @@ printf("maaf, Pilihan Anda Tidak Ada.\n");}
     printf("Jawaban yang kamu berikan salah!");
     getch();
   }
-  printf("Kamu telah keluar dari perulangan!");
+  printf("Kamu telah keluar dari program!");
   getch();
 }
