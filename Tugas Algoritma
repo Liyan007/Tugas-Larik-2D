@@ -20,7 +20,7 @@ case 1:
 for(i=0;i<2;i++){
  for(j=0;j<5;j++) {
   if(a[i][j]==x) {
-    printf("X=3 terdapat di index ke%d",a[i][j]);
+    printf("X=3 terdapat di index ke%d\n",a[i][j]);
     printf("-----------------------------\n");
   }
 }
