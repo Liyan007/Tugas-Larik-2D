@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <conio.h>
+
+main(){
+int a[2][5]={4,5,8,1,2,3,11,23,10,13}, i, j, k, x=3, idx, temp;
+int menu;
+
+printf("Menu Pilihan Anda :\n");
+printf("---------------------------------------\n");
+printf("1. Pencarian X=3 menggunakan larik 2D.\n");
+printf("2. Perurutan Larik Nilai Minimal.\n");
+printf("---------------------------------------\n");
+printf("Masukkan Pilihan Anda :"); scanf("%d", &menu);
+printf("---------------------------------------\n");
+switch(menu){
+case 1:
+for(i=0;i<2;i++){
+ for(j=0;j<5;j++) {
+  if(a[i][j]==x) {
+    printf("X=3 terdapat di index ke%d",a[i][j]);
+    printf("-----------------------------\n");
+  }
+}
+}
+
+break;
+
+case 2:
+for(i=0;i<2*5-1;i++){
+    temp=a[i/5][i%5];
+    idx=i;
+    for(j=1;j<2*5-i;j++)
+    {
+        k=a[(i+j)/5][(i+j)%5];
+        if(temp>k){
+        temp=k;
+        idx=i+j;
+        }
+    }
+    a[idx/5][idx%5]=a[i/5][i%5];
+    a[i/5][i%5]=temp;
+}
+printf("Perurutan :");
+for(i=0;i<=1;i++){
+    for(j=0;j<5;j++){
+        printf(" %d",a[i][j]);
+    }
+}
+printf("\n---------------------------------------\n");
+break;
+
+default:{
+printf("maaf, Pilihan Anda Tidak Ada.\n");}
+}
+}
